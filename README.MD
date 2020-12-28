@@ -8,9 +8,15 @@ Frontend Folder wll have ReactJS Application Files.
 
 Do not use git init in any Folder.
 
+Clone the Repository into your Local Folder.
+
+    $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+
 Create a new Branch before starting to make changes.
 
     $ git checkout -b [name_of_your_new_branch]
+
+Use firstname-lastname for branch names for better understanding.
 
 Push your Branch while git pushing.
 **Do not use git push origin master**
