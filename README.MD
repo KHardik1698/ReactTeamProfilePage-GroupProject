@@ -24,3 +24,9 @@ Check branch before editing Code.
 In case you want to switch between branches.
 
     $ git checkout [name_of_your_new_branch]
+
+Always git pull before making any new changes.
+
+    $ git pull origin master
+
+In case of any conflicts, inform the Team.
