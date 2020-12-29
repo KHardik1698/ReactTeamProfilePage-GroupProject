@@ -1,5 +1,8 @@
 import {Component} from "react";
-// import {Link} from "react-router-dom";
+import {Link} from "react-router-dom";
+import styles from './Home.module.css';
+
+const url="https://niravkpatel28.github.io/json-data-server/employees/employees.json"
 
 class Home extends Component{
     constructor(props){
@@ -9,39 +12,59 @@ class Home extends Component{
         }
     }
 
-    // componentDidMount = (event) => {
-    //     fetch(url)
-    //     .then((response)=>{
-    //         return response.json();
-    //     })
-    //     .then((data)=>{
-    //         console.log(data);
-    //         this.setState({employees: data});
-    //     })
-    //     .catch((err)=>{
-    //         console.log(err);
-    //     })
-    // }
+    componentDidMount(){
+        fetch(url)
+        .then((response)=>{
+            return response.json();
+        })
+        .then((data)=>{
+            console.log(data);
+            this.setState({employees: data});
+        })
+        .catch((err)=>{
+            console.log(err);
+        })
+    }
 
     render(){
         return(
-            <div>Employee Cards</div>
-            // <div>
-            //     {
-            //         this.state.employees.map((employee)=>{
-            //             return(
-            //                 // <div>
-            //                 //     <img src={employee.imageUrl} alt="employee-profilePicture"/>
-            //                 //     <Link to={`/employees/${employee.id}`}>
-            //                 //         <p>{employee.name}</p>
-            //                 //     </Link>
-            //                 //     <p>{employee.company}</p>
-
-            //                 // </div>
-            //             )
-            //         })
-            //     }
-            // </div>
+            <div>
+                <div className={styles["employee-header"]}>
+                    <h1>Our Team</h1>
+                </div>
+                <div className={styles["employee-sub-header"]}>
+                    <h4>Trainee Batch 2020 - Raw Enigneering/Contentstack </h4>
+                </div>
+                <div className={styles["employee-container"]}>
+                    {
+                        this.state.employees.map((employee)=>{
+                            return(
+                                <div key={employee.id}>
+                                <div className={styles["employee-card"]}>
+                                    <div className={styles["image-div"]}>
+                                    <Link to={`/employees/${employee.id}`}>
+                                        <img className={styles["employee-image"]} 
+                                        src={employee.imageUrl} 
+                                        alt={`${employee.name}-profilePicture`}
+                                        />
+                                    </Link>
+                                    </div>
+                                    <div className={styles["employee-details"]}>                                    
+                                    <p> {employee.firstName} {employee.lastName} </p>
+                                    <p>{employee.company}</p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Quod, ratione fugiat aliquid nesciunt deleniti dolor earum quidem
+                                        eos nihil odio ea voluptas magnam libero accusamus exercitationem vitae ex, nam omnis?
+                                    </p>
+                                    </div>
+                                </div>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+            </div>
         )
     }
 }

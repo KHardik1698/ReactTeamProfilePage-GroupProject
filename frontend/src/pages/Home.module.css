@@ -1,0 +1,50 @@
+.employee-container{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 10px auto;
+    border: 2px solid red;
+}
+
+.employee-header{
+    font-size: 30px;
+    text-align: center;
+    color: rgb(219, 66, 66);
+}
+
+.employee-sub-header{
+    /* font-size: 30px; */
+    text-align: center;
+    color: rgb(219, 66, 66);
+}
+
+.employee-card{
+    width: 150vh;
+    height: 30vw;
+    margin: 10px;
+    border: 2px solid black;
+}
+
+.image-div{
+    width: 50vh;
+    height: 25vw;
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+}
+
+.employee-image{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.employee-details{
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    /* float: right; */
+}
+
