@@ -45,7 +45,7 @@ The Main Component is responsible for running the react project on Localhost at 
 
 ### Routes Component in Frontend:
 
-The Routes Component will display the content which is there in "/" endpoint.
+The Routes Component will display the content which iclears there in "/" endpoint.
 Depending on the request route(path), the router will redirect the process to it's equivalent Controllers.
 
 ### Components in Frontend:
