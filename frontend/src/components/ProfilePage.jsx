@@ -3,7 +3,7 @@ import { withRouter } from "react-router-dom";
 import styles from "./ProfilePage.module.css";
 import NotFound from "./NotFound";
 
-const url = "http://localhost:5000/employees";
+const url = "https://employee-card-backend.herokuapp.com/employees";
 class ProfilePage extends Component {
   state = {
     employee: [],
@@ -49,7 +49,7 @@ class ProfilePage extends Component {
             </div>
           </div>
         ) : (
-          <NotFound/>
+          <NotFound />
         )}
       </div>
     );
