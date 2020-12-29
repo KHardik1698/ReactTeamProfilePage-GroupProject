@@ -16,7 +16,6 @@ class Home extends Component {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
         this.setState({ employees: data.data });
       })
       .catch((err) => {
@@ -31,7 +30,12 @@ class Home extends Component {
           return (
             <div key={employee.id}>
               <img src={employee.imageUrl} alt="employee-profilePicture" />
-              <Link to={`/employees/${employee.id}`}>
+              <Link
+                to={{
+                  pathname: `/employees/${employee.id}`,
+                  state: { employee: employee },
+                }}
+              >
                 <p>{employee.name}</p>
               </Link>
               <p>{employee.company}</p>
