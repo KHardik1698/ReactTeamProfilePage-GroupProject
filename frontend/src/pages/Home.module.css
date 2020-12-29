@@ -133,26 +133,26 @@
         color: rgb(219, 66, 66);
         font-family: "Open Sans", "sans-serif";
         margin-top: 10px;
-        font-size: 0.5rem;
+        font-size: 0.8rem;
     }
 
     .employee-description{
         font-weight: lighter;
         font-family: "Open Sans", sans-serif;
         margin-top: 10px;
-        font-size: 0.5rem;
+        font-size: 0.8rem;
     }
 }
 
 @media (max-width: 264px) {
     .employee-header{
-        font-size: 18px;
+        font-size: 20px;
         text-align: center;
         color: rgb(219, 66, 66);
     }
 
     .employee-sub-header{
-        font-size: 12px;
+        font-size: 14px;
         margin: 10px auto;
         text-align: center;
         font-style: italic;

@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
-import styles from './Home.module.css';
-const url = "http://localhost:5000/employees/";
+import styles from "./Home.module.css";
+const url = "https://employee-card-backend.herokuapp.com/employees";
 
 class Home extends Component {
   constructor(props) {
