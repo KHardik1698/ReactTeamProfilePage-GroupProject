@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { withRouter } from "react-router-dom";
 import styles from "./ProfilePage.module.css";
+import NotFound from "./NotFound";
 
 const url = "http://localhost:5000/employees";
 class ProfilePage extends Component {
@@ -48,7 +49,7 @@ class ProfilePage extends Component {
             </div>
           </div>
         ) : (
-          <h1>Not found</h1>
+          <NotFound/>
         )}
       </div>
     );

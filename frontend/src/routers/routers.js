@@ -4,7 +4,7 @@ import Navigation from "../components/Navigation";
 import App from "../App";
 import Home from "../pages/Home";
 import ProfilePage from "../components/ProfilePage";
-// import NotFound from "../components/NotFound";
+import NotFound from "../components/NotFound";
 
 class Router extends Component {
   render() {
@@ -22,7 +22,7 @@ class Router extends Component {
                 return <ProfilePage {...props} />;
               }}
             />
-            {/* <Route component={NotFound}/> */}
+            <Route component={NotFound}/>
           </Switch>
         </BrowserRouter>
       </div>
