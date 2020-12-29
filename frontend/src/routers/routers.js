@@ -4,6 +4,8 @@ import Navigation from "../components/Navigation";
 import App from "../App";
 import Home from "../pages/Home";
 import ProfilePage from "../components/ProfilePage";
+import Footer from "../components/Footer";
+
 // import NotFound from "../components/NotFound";
 
 class Router extends Component {
@@ -14,7 +16,7 @@ class Router extends Component {
           <Navigation />
           <Switch>
             <Route path="/" exact component={App} />
-            <Route path="/employees" exact component={Home}/>
+            <Route path="/employees" exact component={Home} />
             <Route
               path="/employees/:id"
               exact
@@ -24,6 +26,7 @@ class Router extends Component {
             />
             {/* <Route component={NotFound}/> */}
           </Switch>
+          <Footer />
         </BrowserRouter>
       </div>
     );

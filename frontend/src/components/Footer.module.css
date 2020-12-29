@@ -1,0 +1,68 @@
+footer {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 3px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: black;
+  border: 1px solid black;
+}
+footer strong {
+  font-size: 30px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+footer p {
+  font-family: "Josefin Sans", sans-serif;
+  color: grey;
+}
+.fa-facebook-square {
+  font-size: 40px;
+
+  color: white;
+  position: relative;
+  top: 10px;
+  right: 30px;
+  padding: 20px;
+}
+.fa-twitter-square {
+  font-size: 40px;
+  color: white;
+  position: relative;
+  top: 10px;
+  right: 30px;
+  padding: 20px;
+}
+.fa-linkedin-square {
+  font-size: 40px;
+  color: white;
+  position: relative;
+  top: 10px;
+  right: 30px;
+  padding: 20px;
+}
+.space {
+  height: 50px;
+}
+.footer-heading {
+  padding: 10px;
+  background-color: black;
+}
+span h1 {
+  color: white;
+}
+.icons {
+  position: relative;
+  margin-left: 5%;
+  font-size: 30px;
+}
+.copyright-heading {
+  background-color: black;
+}
+.copyright {
+  background-color: black;
+}
