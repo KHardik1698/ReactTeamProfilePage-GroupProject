@@ -28,10 +28,10 @@ class Home extends Component {
         return(
             <div>
                 <div className={styles["employee-header"]}>
-                    <h1>Our Team</h1>
+                    <p>Our Team</p>
                 </div>
                 <div className={styles["employee-sub-header"]}>
-                    <h4>Trainee Batch 2020 - Raw Enigneering/Contentstack </h4>
+                    <p>Trainee Batch 2020 - Raw Enigneering/Contentstack </p>
                 </div>
                 <div className={styles["employee-container"]}>
                     {
@@ -52,14 +52,20 @@ class Home extends Component {
                                         />
                                     </Link>
                                     </div>
-                                    <div className={styles["employee-details"]}>                                    
-                                    <p> {employee.firstName} {employee.lastName} </p>
-                                    <p>{employee.company}</p>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                        Quod, ratione fugiat aliquid nesciunt deleniti dolor earum quidem
-                                        eos nihil odio ea voluptas magnam libero accusamus exercitationem vitae ex, nam omnis?
-                                    </p>
+                                    <div className={styles["employee-details"]}>
+                                        <div className={styles["employee-name"]}>
+                                            <p> {employee.name} </p>
+                                        </div>
+                                        <div className={styles["employee-company"]}>
+                                            <p> {employee.company} </p>
+                                        </div>
+                                        <div className={styles["employee-description"]}>
+                                            <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                            Quod, ratione fugiat aliquid nesciunt deleniti dolor earum quidem
+                                            eos nihil odio ea voluptas magnam libero accusamus exercitationem vitae ex, nam omnis?
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                                 </div>
