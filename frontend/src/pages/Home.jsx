@@ -1,30 +1,28 @@
-import {Component} from "react";
-import {Link} from "react-router-dom";
+import { Component } from "react";
+import { Link } from "react-router-dom";
 import styles from './Home.module.css';
+const url = "http://localhost:5000/employees/";
 
-const url="https://niravkpatel28.github.io/json-data-server/employees/employees.json"
+class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      employees: [],
+    };
+  }
 
-class Home extends Component{
-    constructor(props){
-        super(props);
-        this.state={
-            employees : [],
-        }
-    }
-
-    componentDidMount(){
-        fetch(url)
-        .then((response)=>{
-            return response.json();
-        })
-        .then((data)=>{
-            console.log(data);
-            this.setState({employees: data});
-        })
-        .catch((err)=>{
-            console.log(err);
-        })
-    }
+  componentDidMount = (event) => {
+    fetch(url)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        this.setState({ employees: data.data });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
     render(){
         return(
@@ -42,7 +40,12 @@ class Home extends Component{
                                 <div key={employee.id}>
                                 <div className={styles["employee-card"]}>
                                     <div className={styles["image-div"]}>
-                                    <Link to={`/employees/${employee.id}`}>
+                                    <Link
+                                        to={{
+                                        pathname: `/employees/${employee.id}`,
+                                        state: { employee: employee },
+                                        }}  
+                                    >
                                         <img className={styles["employee-image"]} 
                                         src={employee.imageUrl} 
                                         alt={`${employee.name}-profilePicture`}
