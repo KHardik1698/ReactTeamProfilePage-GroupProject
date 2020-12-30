@@ -4,7 +4,6 @@
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 10px auto;
-    border: 2px solid red;
 }
 
 .employee-header{
@@ -14,23 +13,32 @@
 }
 
 .employee-sub-header{
-    /* font-size: 30px; */
+    font-size: 20px;
+    margin: 10px auto;
     text-align: center;
-    color: rgb(219, 66, 66);
+    font-style: italic;
+    color: rgb(48, 42, 42);
 }
 
 .employee-card{
-    width: 150vh;
-    height: 30vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 95%;
+    height: auto;
     margin: 10px;
     border: 2px solid black;
+    border-radius: 2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .image-div{
-    width: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    width: 30%;
     height: 25vw;
     margin-top: 10px;
-    margin-left: 10px;
     float: left;
 }
 
@@ -41,10 +49,113 @@
 }
 
 .employee-details{
+    font-family: 'Nunito';
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* box-sizing: border-box; */
     text-decoration: none;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 30px;
+    text-align: left;
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
     /* float: right; */
 }
 
+.employee-name{
+    font-weight: bold;
+    font-family: Oswald, sans-serif;
+    font-size: 1.5rem;
+}
+
+.employee-company{
+    color: rgb(219, 66, 66);
+    font-family: "Open Sans", "sans-serif";
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.employee-description{
+    font-weight: lighter;
+    font-family: "Open Sans", sans-serif;
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+@media (max-width: 476px) {
+    
+    .employee-card{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 95%;
+    height: auto;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .image-div{
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    width: 30%;
+    height: 25vw;
+    margin-top: 10px;
+    margin-left: 50px;
+    float: left;
+    }
+
+    .employee-details{
+        font-family: 'Nunito';
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        /* box-sizing: border-box; */
+        text-decoration: none;
+        text-align: left;
+        padding-left: 20px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        /* float: right; */
+    }
+
+    .employee-name{
+        font-weight: bold;
+        font-family: Oswald, sans-serif;
+        font-size: 1rem;
+    }
+
+    .employee-company{
+        color: rgb(219, 66, 66);
+        font-family: "Open Sans", "sans-serif";
+        margin-top: 10px;
+        font-size: 0.8rem;
+    }
+
+    .employee-description{
+        font-weight: lighter;
+        font-family: "Open Sans", sans-serif;
+        margin-top: 10px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 264px) {
+    .employee-header{
+        font-size: 20px;
+        text-align: center;
+        color: rgb(219, 66, 66);
+    }
+
+    .employee-sub-header{
+        font-size: 14px;
+        margin: 10px auto;
+        text-align: center;
+        font-style: italic;
+        color: rgb(48, 42, 42);
+    }
+}
