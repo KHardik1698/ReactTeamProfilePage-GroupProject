@@ -9,7 +9,6 @@ class ProfilePage extends Component {
     employee: [],
     status: "",
   };
-
   componentDidMount = () => {
     fetch(`${url}/${this.props.match.params.id}`)
       .then((response) => {
@@ -37,11 +36,9 @@ class ProfilePage extends Component {
               <p className={styles["name"]}>
                 Everyone, Meet <b>{currentEmployee.name} </b>
               </p>
-
               <p className={styles["designation"]}>
                 {currentEmployee.designation} at {currentEmployee.company}
               </p>
-
               <p className={styles["description"]}>
                 {currentEmployee.description}
               </p>

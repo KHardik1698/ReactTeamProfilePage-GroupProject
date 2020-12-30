@@ -3,6 +3,11 @@
   margin: 10px auto;
 }
 
+.employee-card-container {
+  text-decoration: none;
+  color: black;
+}
+
 .employee-header {
   margin-top: 10px;
   font-size: 30px;
@@ -20,34 +25,32 @@
 
 .employee-card {
   display: flex;
-  text-decoration: none;
   flex-direction: row;
   justify-content: space-between;
+  justify-items: center;
   align-items: center;
   flex-wrap: wrap;
   width: 95%;
   height: auto;
-  margin: 20px auto;
+  margin: 30px auto;
   border: 2px solid black;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
   background-color: #bedcfa;
 }
 
 .image-div {
-  display: flex;
-  flex-wrap: wrap;
-  width: 20%;
-  height: 15vw;
-  margin-top: 10px;
+  width: 25vh;
+  height: 25vh;
   margin: 10px auto;
-  float: left;
-  text-decoration: none;
+  padding: 20px;
+  background-color: #bedcfa;
 }
 
 .employee-image {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  background-color: #bedcfa;
 }
 
 .employee-details {
@@ -57,18 +60,15 @@
   flex-direction: column;
   align-items: center;
   align-self: center;
-  text-align: left;
-  padding-left: 20px;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  text-align: justify;
+  margin: 20px auto;
   background-color: #bedcfa;
 }
 
 .employee-name {
   font-weight: bold;
-  font-family: Oswald, sans-serif;
+  font-family: "Oswald", "sans-serif";
   font-size: 1.5rem;
-  background-color: white;
   text-decoration: none;
   color: black;
 }
@@ -78,16 +78,7 @@
   font-family: "Open Sans", sans-serif;
   margin-top: 10px;
   font-size: 1rem;
-  text-decoration : none;
-  background-color: white;
-}
-.employee-company p,
-.employee-description p,
-.employee-name p {
-  background-color: #bedcfa;
-  /* text-decoration: none; */
-  text-decoration-color:  #bedcfa;
-
+  text-decoration: none;
 }
 
 .employee-description {
@@ -95,58 +86,32 @@
   font-family: "Open Sans", sans-serif;
   margin-top: 10px;
   font-size: 1rem;
-  background-color: white;
   color: black;
+}
+
+.employee-company p,
+.employee-description p,
+.employee-name p {
+  background-color: #bedcfa;
+  text-align: center;
 }
 
 @media (max-width: 476px) {
   .employee-card {
-    display: flex;
     flex-direction: column;
-    justify-items: center;
-    width: 100%;
-    height: auto;
     margin: 10px auto;
-    border: 2px solid black;
-    border-radius: 2%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
-
-  .image-div {
-    width: 30%;
-    height: 25vw;
-    margin-top: 10px;
-  }
-
   .employee-details {
-    font-family: "Nunito";
-    width: 70%;
-    display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    text-decoration: none;
-    text-align: left;
-    padding-left: 0px;
-    margin-left: 0px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin: 20px auto;
   }
-
   .employee-name {
-    font-weight: bold;
-    font-family: Oswald, sans-serif;
     font-size: 1rem;
   }
-
   .employee-company {
-    color: rgb(219, 66, 66);
-    margin-top: 10px;
     font-size: 0.8rem;
   }
-
   .employee-description {
-    font-weight: lighter;
-    margin-top: 10px;
     font-size: 0.8rem;
   }
 }
@@ -154,72 +119,71 @@
 @media (max-width: 264px) {
   .employee-header {
     font-size: 20px;
-    text-align: center;
-    color: rgb(219, 66, 66);
   }
-
   .employee-sub-header {
     font-size: 14px;
-    margin: 10px auto;
-    text-align: center;
-    font-style: italic;
-    color: rgb(48, 42, 42);
+  }
+  .image-div {
+    margin: 0px;
   }
 }
 
 @media (max-width: 200px) {
-    .employee-container {
-        width:100%;
-    }
-    .employee-card{
-        width:80%;
-    }
-    .employee-details{
-        width: 90%;
-    }
-    .employee-header{
-        font-size: 10px;
-    }
-
-    .employee-sub-header {
-        font-size: 7px;
-    }
-
-    .employee-name{
-        font-size: 0.6rem;
-    }
-
-    .employee-company{
-        font-size: 0.4rem;
-    }
-
-    .employee-description{
-        font-size: 0.4rem;
-    }
+  .employee-container {
+    width: 100%;
+  }
+  .employee-card {
+    width: 80%;
+  }
+  .image-div {
+    height: 40vw;
+    width: 40vw;
+    margin: 0px;
+    padding: 5px;
+  }
+  .employee-details {
+    width: 90%;
+    margin-top: 0px;
+  }
+  .employee-name,
+  .employee-company,
+  .employee-description {
+    margin-top: 0px;
+  }
+  .employee-header {
+    font-size: 10px;
+  }
+  .employee-sub-header {
+    font-size: 7px;
+  }
+  .employee-name {
+    font-size: 0.6rem;
+  }
+  .employee-company {
+    font-size: 0.4rem;
+  }
+  .employee-description {
+    font-size: 0.4rem;
+  }
 }
 
-@media (max-width: 100px){
-    .employee-details{
-        margin-bottom: 10px;
-    }
-
-    .employee-header{
-        font-size: 8vw;
-    }
-
-    .employee-sub-header {
-        font-size: 5vw;
-    }
-
-    .employee-name{
-        font-size: 8vw;
-    }
-
-    .employee-company{
-        font-size: 6vw;
-    }
-
-    .employee-description{
-        font-size: 5vw;
-    }
+@media (max-width: 100px) {
+  .employee-details {
+    margin-bottom: 10px;
+  }
+  .employee-header {
+    font-size: 8vw;
+  }
+  .employee-sub-header {
+    font-size: 5vw;
+  }
+  .employee-name {
+    font-size: 8vw;
+  }
+  .employee-company {
+    font-size: 6vw;
+  }
+  .employee-description {
+    font-size: 5vw;
+  }
 }
