@@ -1,12 +1,10 @@
 .employee-container {
   width: 80%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   margin: 10px auto;
 }
 
 .employee-header {
+    margin-top: 10px;
   font-size: 30px;
   text-align: center;
   color: rgb(219, 66, 66);
@@ -22,14 +20,15 @@
 
 .employee-card {
   display: flex;
+  text-decoration: none;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   width: 95%;
   height: auto;
-  margin: 20px;
+  margin: 20px auto;
   border: 2px solid black;
-  /* border-radius: 1%; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   background-color: #bedcfa;
 }
@@ -37,13 +36,11 @@
 .image-div {
   display: flex;
   flex-wrap: wrap;
-  /* flex-direction: column; */
   width: 20%;
   height: 15vw;
   margin-top: 10px;
   margin: 10px auto;
   float: left;
-  /* background-color: #bedcfa; */
 }
 
 .employee-image {
@@ -59,15 +56,12 @@
   flex-direction: column;
   align-items: center;
   align-self: center;
-  flex-wrap: wrap;
-  /* box-sizing: border-box; */
   text-decoration: none;
   text-align: left;
   padding-left: 20px;
   margin-top: 10px;
   margin-bottom: 20px;
   background-color: #bedcfa;
-  /* float: right; */
 }
 
 .employee-name {
@@ -79,7 +73,7 @@
 
 .employee-company {
   color: rgb(219, 66, 66);
-  font-family: "Open Sans", "sans-serif";
+  font-family: "Open Sans", sans-serif;
   margin-top: 10px;
   font-size: 1rem;
   background-color: white;
@@ -102,24 +96,19 @@
   .employee-card {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    width: 95%;
+    justify-items: center;
+    width: 100%;
     height: auto;
-    margin: 10px;
+    margin: 10px auto;
     border: 2px solid black;
     border-radius: 2%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
 
   .image-div {
-    display: flex;
-    flex-wrap: wrap;
-    /* flex-direction: column; */
     width: 30%;
     height: 25vw;
     margin-top: 10px;
-    margin-left: 50px;
-    float: left;
   }
 
   .employee-details {
@@ -128,13 +117,12 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    /* box-sizing: border-box; */
     text-decoration: none;
     text-align: left;
-    padding-left: 20px;
+    padding-left: 0px;
+    margin-left: 0px;
     margin-top: 10px;
     margin-bottom: 20px;
-    /* float: right; */
   }
 
   .employee-name {
@@ -145,14 +133,12 @@
 
   .employee-company {
     color: rgb(219, 66, 66);
-    font-family: "Open Sans", "sans-serif";
     margin-top: 10px;
     font-size: 0.8rem;
   }
 
   .employee-description {
     font-weight: lighter;
-    font-family: "Open Sans", sans-serif;
     margin-top: 10px;
     font-size: 0.8rem;
   }
@@ -172,4 +158,61 @@
     font-style: italic;
     color: rgb(48, 42, 42);
   }
+}
+
+@media (max-width: 200px) {
+    .employee-container {
+        width:100%;
+    }
+    .employee-card{
+        width:80%;
+    }
+    .employee-details{
+        width: 90%;
+    }
+    .employee-header{
+        font-size: 10px;
+    }
+
+    .employee-sub-header {
+        font-size: 7px;
+    }
+
+    .employee-name{
+        font-size: 0.6rem;
+    }
+
+    .employee-company{
+        font-size: 0.4rem;
+    }
+
+    .employee-description{
+        font-size: 0.4rem;
+    }
+}
+
+@media (max-width: 100px){
+    .employee-details{
+        margin-bottom: 10px;
+    }
+
+    .employee-header{
+        font-size: 8vw;
+    }
+
+    .employee-sub-header {
+        font-size: 5vw;
+    }
+
+    .employee-name{
+        font-size: 8vw;
+    }
+
+    .employee-company{
+        font-size: 6vw;
+    }
+
+    .employee-description{
+        font-size: 5vw;
+    }
 }
