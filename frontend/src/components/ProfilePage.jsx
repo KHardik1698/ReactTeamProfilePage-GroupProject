@@ -1,7 +1,9 @@
 import { Component } from "react";
+
 import { withRouter } from "react-router-dom";
 import styles from "./ProfilePage.module.css";
 import NotFound from "./NotFound";
+// import initFontAwesome from "../components/initFontAwesome";
 
 const url = "https://employee-card-backend.herokuapp.com/employees";
 class ProfilePage extends Component {
@@ -24,6 +26,7 @@ class ProfilePage extends Component {
       });
   };
   render() {
+    // initFontAwesome();
     let currentEmployee = this.state.employee;
     return (
       <div>
@@ -35,17 +38,20 @@ class ProfilePage extends Component {
               alt=""
             />
             <div className={styles["employee-info"]}>
-              <p className={styles["name"]}>{currentEmployee.name}</p>
-              <h6 className={styles["company"]}>
-                <i>{currentEmployee.company}</i>
-              </h6>
+              <p className={styles["name"]}>
+                Everyone, Meet <b>{currentEmployee.name} </b>
+              </p>
+
               <p className={styles["designation"]}>
-                {currentEmployee.designation}
+                {currentEmployee.designation} at {currentEmployee.company}
               </p>
 
               <p className={styles["description"]}>
                 {currentEmployee.description}
               </p>
+              <a href={currentEmployee.githubLink} className={styles["github"]}>
+                <i className={styles["github-heading"]}>GitHub Link</i>
+              </a>
             </div>
           </div>
         ) : (
