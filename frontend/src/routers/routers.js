@@ -1,11 +1,10 @@
 import { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Navigation from "../components/Navigation";
-// import App from "../App";
 import Home from "../pages/Home";
-import ProfilePage from "../components/ProfilePage";
+import ProfilePage from "../pages/ProfilePage";
 import Footer from "../components/Footer";
-import NotFound from "../components/NotFound";
+import NotFound from "../pages/NotFound";
 import initFontAwesome from "../components/initFontAwesome";
 
 class Router extends Component {
@@ -16,7 +15,6 @@ class Router extends Component {
         <BrowserRouter>
           <Navigation />
           <Switch>
-            {/* <Route path="/" exact component={App} /> */}
             <Route path="/" exact component={Home} />
             <Route
               path="/employees/:id"
