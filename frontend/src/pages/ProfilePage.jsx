@@ -1,9 +1,7 @@
 import { Component } from "react";
-
 import { withRouter } from "react-router-dom";
 import styles from "./ProfilePage.module.css";
 import NotFound from "./NotFound";
-// import initFontAwesome from "../components/initFontAwesome";
 
 const url = "https://employee-card-backend.herokuapp.com/employees";
 class ProfilePage extends Component {
@@ -18,7 +16,6 @@ class ProfilePage extends Component {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
         this.setState({ employee: data.data, status: data.status });
       })
       .catch((err) => {
@@ -26,7 +23,6 @@ class ProfilePage extends Component {
       });
   };
   render() {
-    // initFontAwesome();
     let currentEmployee = this.state.employee;
     return (
       <div>

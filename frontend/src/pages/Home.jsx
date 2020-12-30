@@ -25,7 +25,6 @@ class Home extends Component {
   };
 
   render() {
-    // initFontAwesome();
     return (
       <div>
         <div className={styles["employee-header"]}>

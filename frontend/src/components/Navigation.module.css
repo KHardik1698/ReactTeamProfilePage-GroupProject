@@ -2,11 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* margin: 10px; */
   background-color: black;
   font-family: "Space Grotesk", sans-serif;
 }
-
 .topnav ul {
   list-style-type: none;
 }
@@ -35,7 +33,6 @@ ul li {
     justify-content: space-between;
     align-items: center;
   }
-
   .ul li {
     display: flex;
     flex-direction: column;

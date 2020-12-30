@@ -7,11 +7,9 @@ footer {
   display: flex;
   align-items: center;
   flex-direction: column;
-
   background-color: black;
   border: 1px solid black;
 }
-
 footer p {
   font-family: "Josefin Sans", sans-serif;
   color: grey;
@@ -32,9 +30,6 @@ span h1 {
   color: white;
 }
 .icons {
-  /* position: relative;
-  margin-left: 5%;
-  font-size: 30px; */
   background-color: black;
 }
 .copyright-heading {
@@ -44,7 +39,6 @@ span h1 {
 .copyright {
   background-color: black;
 }
-
 @media (max-width: 550px) {
   .copyright-heading {
     font-size: 15px;
