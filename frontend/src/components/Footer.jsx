@@ -1,5 +1,7 @@
 import { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { library } from "@fortawesome/fontawesome-svg-core";
+
 // import { faFacebookF } from "@fortawesome/free-solid-svg-icons";
 
 // import faStyles from "font-awesome/css/font-awesome.css";
@@ -12,23 +14,32 @@ class Footer extends Component {
     return (
       <footer>
         <div className={footerstyle["icons"]}>
-          <span>
-            {/* <i className={footerstyle["fa fa-twitter-square"]}> </i> */}
-            <FontAwesomeIcon icon={["fab", "facebook"]} />
-          </span>
-          <span>
-            {/* <i className={footerstyle["fa fa-linkedin-square"]}></i> */}
-          </span>
-          <span>
-            <i className={footerstyle["fa fa-facebook-square"]}></i>
-          </span>
+          {/* <span> */}
+          {/* <i className={footerstyle["fa fa-twitter-square"]}> </i> */}
+          <FontAwesomeIcon
+            icon={["fab", "facebook"]}
+            className={footerstyle["facebook-icon"]}
+            // size="2x"
+          />
+          {/* </span> */}
+          {/* <span> */}
+          <FontAwesomeIcon
+            icon={["fab", "twitter"]}
+            className={footerstyle["twitter-icon"]}
+            // size="2x"
+          />
+          {/* </span> */}
+          {/* <span> */}
+          <FontAwesomeIcon
+            icon={["fab", "linkedin"]}
+            className={footerstyle["linkedin-icon"]}
+            // size="2x"
+          />
+          {/* </span> */}
         </div>
         <span className={footerstyle["footer-heading"]}>
-          <span>
-            <h1 className={footerstyle["copyright-heading"]}>
-              Raw Engineering
-            </h1>
-          </span>
+          <p className={footerstyle["copyright-heading"]}>Raw Engineering</p>
+
           <br />
           <p className={footerstyle["copyright"]}>
             Copyright &copy; raweng.com 2020

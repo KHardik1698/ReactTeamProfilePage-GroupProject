@@ -9,11 +9,6 @@ class Navigation extends Component {
         <ul>
           <li>
             <Link to="/" className={NavStyle["link"]}>
-              Landing Page
-            </Link>
-          </li>
-          <li>
-            <Link to="/employees" className={NavStyle["link"]}>
               Our Team
             </Link>
           </li>

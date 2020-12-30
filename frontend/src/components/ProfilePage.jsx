@@ -2,8 +2,10 @@ import { Component } from "react";
 
 import { withRouter } from "react-router-dom";
 import styles from "./ProfilePage.module.css";
+import NotFound from "./NotFound";
+// import initFontAwesome from "../components/initFontAwesome";
 
-const url = "http://localhost:5000/employees";
+const url = "https://employee-card-backend.herokuapp.com/employees";
 class ProfilePage extends Component {
   state = {
     employee: [],
@@ -24,7 +26,8 @@ class ProfilePage extends Component {
       });
   };
   render() {
-    let currentEmployee = this.props.location.state.employee;
+    // initFontAwesome();
+    let currentEmployee = this.state.employee;
     return (
       <div>
         {this.state.status === "Successful" ? (
@@ -38,9 +41,7 @@ class ProfilePage extends Component {
               <p className={styles["name"]}>
                 Everyone, Meet <b>{currentEmployee.name} </b>
               </p>
-              {/* <h6 className={styles["company"]}>
-                <i>{currentEmployee.company}</i>
-              </h6> */}
+
               <p className={styles["designation"]}>
                 {currentEmployee.designation} at {currentEmployee.company}
               </p>
@@ -54,7 +55,7 @@ class ProfilePage extends Component {
             </div>
           </div>
         ) : (
-          <h1>Not found</h1>
+          <NotFound />
         )}
       </div>
     );

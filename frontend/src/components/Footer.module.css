@@ -2,7 +2,7 @@ footer {
   width: 100%;
   height: auto;
   text-align: center;
-  padding: 3px;
+  padding: 10px;
   margin-top: 30px;
   display: flex;
   align-items: center;
@@ -11,42 +11,18 @@ footer {
   background-color: black;
   border: 1px solid black;
 }
-footer strong {
-  font-size: 30px;
-  font-family: "Josefin Sans", sans-serif;
-}
 
 footer p {
   font-family: "Josefin Sans", sans-serif;
   color: grey;
 }
-.fa-facebook-square {
-  font-size: 40px;
-
-  color: white;
-  position: relative;
-  top: 10px;
-  right: 30px;
-  padding: 20px;
-}
-.fa-twitter-square {
-  font-size: 40px;
-  color: white;
-  position: relative;
-  top: 10px;
-  right: 30px;
-  padding: 20px;
-}
-.fa-linkedin-square {
-  font-size: 40px;
-  color: white;
-  position: relative;
-  top: 10px;
-  right: 30px;
-  padding: 20px;
-}
-.space {
-  height: 50px;
+.facebook-icon,
+.twitter-icon,
+.linkedin-icon {
+  font-size: 30px;
+  background-color: black;
+  color: grey;
+  margin: 15px;
 }
 .footer-heading {
   padding: 10px;
@@ -56,13 +32,43 @@ span h1 {
   color: white;
 }
 .icons {
-  position: relative;
+  /* position: relative;
   margin-left: 5%;
-  font-size: 30px;
+  font-size: 30px; */
+  background-color: black;
 }
 .copyright-heading {
   background-color: black;
+  font-size: 25px;
 }
 .copyright {
   background-color: black;
+}
+
+@media (max-width: 550px) {
+  .copyright-heading {
+    font-size: 15px;
+  }
+}
+@media (max-width: 200px) {
+  .facebook-icon,
+  .twitter-icon,
+  .linkedin-icon {
+    font-size: 20px;
+    margin: 10px;
+  }
+}
+@media (max-width: 130px) {
+  .copyright-heading {
+    font-size: 10vw;
+  }
+  .copyright {
+    font-size: 10vw;
+  }
+  .facebook-icon,
+  .twitter-icon,
+  .linkedin-icon {
+    font-size: 15px;
+    margin: 5px;
+  }
 }

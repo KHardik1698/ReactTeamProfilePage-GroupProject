@@ -1,8 +1,8 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Home.module.css";
-// import Footer from "../components/Footer";
-const url = "http://localhost:5000/employees/";
+// import initFontAwesome from "../components/initFontAwesome";
+const url = "https://employee-card-backend.herokuapp.com/employees";
 
 class Home extends Component {
   constructor(props) {
@@ -26,13 +26,14 @@ class Home extends Component {
   };
 
   render() {
+    // initFontAwesome();
     return (
       <div>
         <div className={styles["employee-header"]}>
-          <h1>Our Team</h1>
+          <p>Our Team</p>
         </div>
         <div className={styles["employee-sub-header"]}>
-          <h4>Trainee Batch 2020 - Raw Enigneering/Contentstack </h4>
+          <p>Trainee Batch 2020 - Raw Enigneering/Contentstack </p>
         </div>
         <div className={styles["employee-container"]}>
           {this.state.employees.map((employee) => {
@@ -40,12 +41,7 @@ class Home extends Component {
               <div key={employee.id}>
                 <div className={styles["employee-card"]}>
                   <div className={styles["image-div"]}>
-                    <Link
-                      to={{
-                        pathname: `/employees/${employee.id}`,
-                        state: { employee: employee },
-                      }}
-                    >
+                    <Link to={`/employees/${employee.id}`}>
                       <img
                         className={styles["employee-image"]}
                         src={employee.imageUrl}
@@ -54,17 +50,20 @@ class Home extends Component {
                     </Link>
                   </div>
                   <div className={styles["employee-details"]}>
-                    <p>
-                      {" "}
-                      {employee.firstName} {employee.lastName}{" "}
-                    </p>
-                    <p>{employee.company}</p>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Quod, ratione fugiat aliquid nesciunt deleniti dolor earum
-                      quidem eos nihil odio ea voluptas magnam libero accusamus
-                      exercitationem vitae ex, nam omnis?
-                    </p>
+                    <div className={styles["employee-name"]}>
+                      <p> {employee.name} </p>
+                    </div>
+                    <div className={styles["employee-company"]}>
+                      <p> {employee.company} </p>
+                    </div>
+                    <div className={styles["employee-description"]}>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quod, ratione fugiat aliquid nesciunt deleniti dolor
+                        earum quidem eos nihil odio ea voluptas magnam libero
+                        accusamus exercitationem vitae ex, nam omnis?
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
