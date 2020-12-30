@@ -7,10 +7,10 @@ class Footer extends Component {
     return (
       <footer>
         <div className={footerstyle["icons"]}>
-            <FontAwesomeIcon
-              icon={["fab", "facebook"]}
-              className={footerstyle["facebook-icon"]}
-            />
+          <FontAwesomeIcon
+            icon={["fab", "facebook"]}
+            className={footerstyle["facebook-icon"]}
+          />
           <FontAwesomeIcon
             icon={["fab", "twitter"]}
             className={footerstyle["twitter-icon"]}

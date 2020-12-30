@@ -10,7 +10,6 @@ class Home extends Component {
       employees: [],
     };
   }
-
   componentDidMount = (event) => {
     fetch(url)
       .then((response) => {
@@ -23,7 +22,6 @@ class Home extends Component {
         console.log(err);
       });
   };
-
   render() {
     return (
       <div>
@@ -37,7 +35,10 @@ class Home extends Component {
           {this.state.employees.map((employee) => {
             return (
               <div key={employee.id}>
-                <Link to={`/employees/${employee.id}`}>
+                <Link
+                  to={`/employees/${employee.id}`}
+                  className={styles["employee-card-container"]}
+                >
                   <div className={styles["employee-card"]}>
                     <div className={styles["image-div"]}>
                       <img
@@ -55,10 +56,10 @@ class Home extends Component {
                       </div>
                       <div className={styles["employee-description"]}>
                         <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                          Quod, ratione fugiat aliquid nesciunt deleniti dolor
-                          earum quidem eos nihil odio ea voluptas magnam libero
-                          accusamus exercitationem vitae ex, nam omnis?
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Quod, ratione fugiat aliquid nesciunt deleniti
+                          dolor earum quidem eos nihil odio ea voluptas magnam
+                          libero accusamus exercitationem vitae ex, nam omnis?
                         </p>
                       </div>
                     </div>

@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
 import NavStyle from "./Navigation.module.css";
+
 class Navigation extends Component {
   render() {
     return (
