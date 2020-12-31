@@ -1,3 +1,9 @@
+.loading {
+  text-align: center;
+  font-size: 20px;
+  margin: 20px auto;
+}
+
 .employee-container {
   width: 80%;
   margin: 10px auto;
@@ -97,6 +103,9 @@
 }
 
 @media (max-width: 476px) {
+  .loading {
+    font-size: 5vw;
+  }
   .employee-card {
     flex-direction: column;
     margin: 10px auto;
