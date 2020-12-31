@@ -1,4 +1,5 @@
 import style from "./NotFound.module.css";
+import { Link } from "react-router-dom";
 
 function NotFound() {
   return (
@@ -8,6 +9,9 @@ function NotFound() {
         alt="not found banner"
         className={style["image"]}
       ></img>
+      <Link to="/" className={style["home-link"]}>
+        <button className={style["home-button"]}>Go to Home Page</button>
+      </Link>
     </div>
   );
 }

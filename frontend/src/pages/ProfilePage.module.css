@@ -4,6 +4,11 @@
   box-sizing: border-box;
   background-color: #e6e6fa;
 }
+.loading {
+  text-align: center;
+  font-size: 20px;
+  margin: 20px auto;
+}
 .container {
   width: 80%;
   display: flex;
@@ -76,6 +81,9 @@
 }
 
 @media (max-width: 900px) {
+  .loading {
+    font-size: 2vw;
+  }
   .container {
     flex-direction: column;
     justify-content: space-between;
@@ -91,6 +99,9 @@
 }
 
 @media (max-width: 650px) {
+  .loading {
+    font-size: 3vw;
+  }
   .image-container {
     width: 30vw;
     height: 40vw;
@@ -123,6 +134,9 @@
 }
 
 @media (max-width: 130px) {
+  .loading {
+    font-size: 5vw;
+  }
   .name,
   .company,
   .designation {
