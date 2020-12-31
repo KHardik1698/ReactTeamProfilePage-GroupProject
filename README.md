@@ -1,6 +1,7 @@
 # React Routing Employee Card rendering with Nodejs Backend API
 
-This repository contains a Project in which Employee cards are rendered using the nodeJS API and front end is done using React. To get particular Employee's Profile Page , rendering is done using React Routing.
+This repository contains a Project in which Employee Cards are rendered using the NodeJS Backend API and Frontend is made using React.\
+To get a particular Employee's Profile Page, rendering is done using React Routing.
 
 # API End Points:
 
@@ -16,7 +17,7 @@ The Endpoint to get a particular Employee Profile Page by Id:
 
 Here , we will get the particular Employee's Profile page at this endpoint.
 
-Any invalid url will lead to 404 Page Not Found.
+Any invalid endpoint will lead to 404 Page Not Found.
 
 # Data Source:
 
@@ -52,22 +53,46 @@ Depending on the request route(path), the router will redirect the process to it
 There are Navigation and Footer Components which display the header and footer component respectively.\
 The header and footer Components are displayed on all the pages.
 
-- # pages:
+- # Pages:
 
   This will display all the page modules present in this folder.
   It contains Home Page, Profile Page and Not found Page.
 
-- # routers:
+- # Routers:
   This file contains all the routes. The routes are given to the component,based on the which the page will be displayed according to the endpoint.
 
 # To run the Project:
 
-- ### For Frontend:
+- ## For Frontend:
 
-  Run command
+  Navigate into Frontend folder.\
+  Then run this command only once:
 
-        npm run start
+      nmp install
 
-- ### For Backend:
-  Backend is hosted on the Heroku.\
+  To install all the dependencies.
+
+  Then run the command:
+
+      npm run start
+
+  To start the React Server whenever you need to see the Webpage.
+
+- ## For Backend:
+
+  Navigate into Backend folder.\
+  Then run this command only once:
+
+      nmp install
+
+  To install all the dependencies.
+
+  Then run the command:
+
+      npm run start
+
+  To start the Backend Server whenever you need to send a get api request to the Server.
+
+  Or the Backend is also hosted on Heroku.\
+  This link can also be used to send a get api request.\
   [Link for Backend](https://employee-card-backend.herokuapp.com/employees)
