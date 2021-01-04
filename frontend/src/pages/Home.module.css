@@ -36,11 +36,11 @@
   justify-items: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 95%;
+  width: 90%;
   height: auto;
-  margin: 30px auto;
-  border: 2px solid black;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+  margin: 50px auto;
+  border: 2px solid #bedcfa;
+  box-shadow: 0 4px 8px 0 #008891;
   background-color: #bedcfa;
 }
 
@@ -69,6 +69,7 @@
   text-align: justify;
   margin: 20px auto;
   background-color: #bedcfa;
+  color: #4a4e69;
 }
 
 .employee-name {
@@ -76,7 +77,8 @@
   font-family: "Oswald", "sans-serif";
   font-size: 1.5rem;
   text-decoration: none;
-  color: black;
+  /* color: #4a4e69; */
+  color: #3d5a80;
 }
 
 .employee-company {
