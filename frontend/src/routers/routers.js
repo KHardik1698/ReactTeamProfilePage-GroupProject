@@ -2,7 +2,7 @@ import { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "../pages/Home";
 import ProfilePage from "../pages/ProfilePage";
-import NotFound from "../pages/NotFound";
+import NotFound from "../components/NotFound";
 
 class Router extends Component {
   render() {
