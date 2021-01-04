@@ -3,7 +3,7 @@ import styles from "./ProfilePage.module.css";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import initFontAwesome from "../components/initFontAwesome";
-import NotFound from "./NotFound";
+import NotFound from "../components/NotFound";
 
 const url = "https://employee-card-backend.herokuapp.com/employees";
 class ProfilePage extends Component {
