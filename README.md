@@ -68,7 +68,7 @@ The header and footer Components are displayed on all the pages.
   Navigate into Frontend folder.\
   Then run this command only once:
 
-      nmp install
+      npm install
 
   To install all the dependencies.
 
@@ -83,7 +83,7 @@ The header and footer Components are displayed on all the pages.
   Navigate into Backend folder.\
   Then run this command only once:
 
-      nmp install
+      npm install
 
   To install all the dependencies.
 
